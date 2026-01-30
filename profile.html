@@ -1,67 +1,90 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>profile</title>
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>profile</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
 
-    <body>
-        <div>
-            <div class="h-40">
-                <img
-                    src="grs.jpg"
-                    alt="pic1"
-                    class="w-full h-full object-cover"
-                />
-            </div>
+  <body class="bg-gray-100">
 
-            <div class="px-4 relative">
-                <img
-                    src="gh.jpg"
-                    alt="pic2"
-                    class="w-24 h-24 rounded-full border-4 border-white absolute -top-12"
-                />
+    <div class="max-w-md md:max-w-xl lg:max-w-2xl mx-auto">
 
-                <div class="flex justify-end gap-2 mt-4">
-                    <button
-                        class="bg-black text-white px-4 py-1 rounded-full text-sm"
-                    >
-                        Follow
-                    </button>
-                    <button class="w-8 h-4">
-                        <img class="center" src="email.png" alt="email" />
-                    </button>
-                </div>
+      <div class="h-40 md:h-52">
+        <img
+          src="grs.jpg"
+          alt="pic1"
+          class="w-full h-full object-cover"
+        />
+      </div>
 
-                <h2 class="mt-6 font-bold text-lg">SKye Silva</h2>
-                <p class="text-gray-500 text-sm">@shotbysky</p>
+      <div class="px-4 relative">
+        <img
+          src="gh.jpg"
+          alt="pic2"
+          class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-white absolute -top-12"
+        />
 
-                <div class="flex gap-6 mt-3 text-center">
-                    <div>
-                        <p class="font-bold">204</p>
-                        <p class="text-gray-500 text-xs">Following</p>
-                    </div>
-                    <div>
-                        <p class="font-bold">1.2M</p>
-                        <p class="text-gray-500 text-xs">Followers</p>
-                    </div>
-                </div>
-            </div>
+        <div class="flex justify-end gap-2 mt-4">
+          <button
+            class="bg-black text-white px-4 py-1 rounded-full text-sm"
+          >
+            Follow
+          </button>
+
+          <button class="w-8 h-8">
+            <img src="email.png" alt="email" />
+          </button>
         </div>
-        <div class="ml-2 md:text-3xl md:cneter">
-            <p class="mt-2">Hi i’m SKye! lisbon,Portugal based</p>
 
-            <p>Travel + drone videographer ,Follow my advantures !</p>
+        <h2 class="mt-6 font-bold text-lg md:text-xl">
+          Samira Silva
+        </h2>
+        <p class="text-gray-500 text-sm">@shotbysky</p>
+
+        <div class="flex gap-6 mt-3 text-center">
+          <div>
+            <p class="font-bold">204</p>
+            <p class="text-gray-500 text-xs">Following</p>
+          </div>
+          <div>
+            <p class="font-bold">1.2M</p>
+            <p class="text-gray-500 text-xs">Followers</p>
+          </div>
         </div>
-        <section class="flex gap-x-90 md:w-full">
-            <div class="flex gap-2 mt-2">
-                <img class="md:w-50 md: ml-2" src="gh.jpg" alt="image" />
-                <img class="w-45 md:w-50" src="pic3.jpg" alt="flowers" />
-            </div>
+      </div>
 
-            <img class="w-92 ml-2 mt-4 md:w-100 md:mb-2 " src="pic4.jpg" alt="Grèce" />
-        </section>
-    </body>
+      
+      <div class="px-4 mt-2">
+        <p>Hi i’m Samira! Lisbon, Portugal based</p>
+        <p>Travel + drone videographer, Follow my adventures!</p>
+      </div>
+
+     
+      <section class="grid grid-cols-2 gap-2 mt-4 px-2">
+        <img
+          src="gh.jpg"
+          alt="image"
+          class="w-full h-40 md:h-48 object-cover rounded-lg"
+        />
+        <img
+          src="pic3.jpg"
+          alt="flowers"
+          class="w-full h-40 md:h-48 object-cover rounded-lg"
+        />
+      </section>
+
+     
+      <div class="px-2 mt-4">
+        <img
+          src="pic4.jpg"
+          alt=""
+          class="w-full h-60 md:h-80 object-cover rounded-lg"
+        />
+      </div>
+
+    </div>
+
+  </body>
 </html>
