@@ -10,7 +10,7 @@
     <body class="bg-gray-100">
         <main>
             <section
-                class="min-h-screen bg-cover bg-center md:py-6"
+                class="min-h-screen bg-cover bg-center mb-22 md:py-6"
                 style="background-image: url(&quot;dfc.jpg&quot;)"
             >
                 <div class="max-w-md md:max-w-4xl mx-auto px-2">
@@ -70,9 +70,16 @@
                         </div>
                     </div>
 
-                    <p class="bg-white w-fit rounded-lg py-1 px-3 mt-4 ml-2">
-                        what do you want to read ?
-                    </p>
+                    <div class="flex justify-between items-center my-5">
+                        <p class="bg-white w-fit rounded-lg py-1 px-3">
+                            what do you want to read ?
+                        </p>
+                        <button
+                            class="add_btn bg-green-500 h-10 w-25 rounded-full border-2"
+                        >
+                            ADD
+                        </button>
+                    </div>
 
                     <div class="flex gap-2 overflow-x-auto mt-2 md:flex-wrap">
                         <button class="bg-green-500 px-4 py-1 rounded-lg">
@@ -104,11 +111,7 @@
                             class="bg-white rounded-b-[25px] md:rounded-[25px] flex justify-around items-center py-4"
                         >
                             <img class="w-8 h-8" src="clock.png" alt="time" />
-                            <img
-                                class="w-8 h-8"
-                                src="heart (1).png"
-                                alt="heart"
-                            />
+                            <img class="w-8 h-8" src="heart.png" alt="heart" />
                             <img
                                 class="w-8 h-8"
                                 src="black-placeholder-variant.png"
@@ -120,13 +123,90 @@
             </section>
 
             <div
-                class="fixed bottom-0 left-0 right-0 bg-white h-20 flex justify-around items-center"
+                class="fixed bottom-0 left-0 right-0 bg-white h-20 flex justify-around items-center md:flex md:flex-col md:top-0 md:absolute md:left-0"
             >
                 <img class="w-8 h-8" src="home.png" />
                 <img class="w-8 h-8" src="heart.png" />
                 <img class="w-8 h-8" src="black-placeholder-variant.png" />
-                <a href="profile.html"><img class="w-8 h-8" src="user.png" /></a>
+                <a href="profile.html"
+                    ><img class="w-8 h-8" src="user.png"
+                /></a>
             </div>
         </main>
+
+        <div
+            class="form fixed top-0 right-0 left-0 bottom-0 flex justify-center items-center h-[100vh] hidden"
+        >
+            <section
+                class="bg-green-500 w-90 mt-2 rounded-lg flex flex-col justify-center items-center py-6"
+            >
+                <p class="font-bold ml-8">ADD DISTINATION</p>
+                <div class="flex gap-8 items-center mt-2">
+                    <label for="title">Title</label>
+                    <input
+                        class="bg-white rounded-lg border-2"
+                        type="text"
+                        id="title"
+                        placeholder="enter title"
+                    />
+                </div>
+
+                <div class="flex gap-8 items-center mt-2">
+                    <label for="title" class="w-15"></label>
+                    <input
+                        class="bg-white rounded-lg border-2"
+                        type="text"
+                        id="title"
+                        placeholder="enter title"
+                    />
+                </div>
+
+                <div class="flex gap-8 items-center mt-2">
+                    <label for="title" lass="w-15">Distination</label>
+                    <input
+                        class="bg-white rounded-lg border-2"
+                        type="text"
+                        placeholder="enter Distination"
+                    />
+                </div>
+
+                <div class="flex gap-5 mt-2">
+                    <label for="title" lass="w-15">Catégorie</label>
+                    <input
+                        class="bg-white rounded-lg border-2"
+                        type="text"
+                        placeholder="enter Catégorie"
+                    />
+                </div>
+
+                <div class="flex items-start gap-2 mt-2">
+                    <label for="title">Note</label>
+                    <input
+                        class="bg-white rounded-lg border-2"
+                        type="text"
+                        placeholder="1"
+                    />
+                </div>
+
+                <div class="flex gap-2 mt-2">
+                    <label for="title">Image</label>
+                    <input
+                        class="bg-white rounded-lg border-2"
+                        type="text"
+                        placeholder="URL"
+                    />
+                </div>
+
+                <button class="bg-white font-bold py-2 px-6 rounded-full">
+                    Add blog
+                </button>
+                <button
+                    class="close_btn bg-white font-bold py-2 px-6 rounded-full mt-4"
+                >
+                    close
+                </button>
+            </section>
+        </div>
+        <script src="main.js"></script>
     </body>
 </html>
