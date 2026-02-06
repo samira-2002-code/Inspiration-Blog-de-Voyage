@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <title>Home</title>
+        <title>ViaBlog</title>
     </head>
 
     <body class="bg-gray-100">
@@ -20,10 +20,6 @@
                         <img class="w-10 h-10" src="burger-bar.png" />
                         <img class="w-10 h-10" src="search.png" />
                     </section>
-
-                    <h2 class="text-2xl font-bold px-2 mt-4 mb-4">
-                        Blogger of the week
-                    </h2>
 
                     <div
                         class="flex gap-4 overflow-x-auto md:grid md:grid-cols-5 md:overflow-visible"
@@ -69,64 +65,135 @@
                             <p class="text-xs mt-1">Samira</p>
                         </div>
                     </div>
+                    <h2 class="text-2xl font-bold px-2 mt-4 mb-4">
+                        Blogger of the week
+                    </h2>
 
-                    <p class="bg-white w-fit rounded-lg py-1 px-3 mt-4 ml-2">
-                        what do you want to read ?
-                    </p>
+                   
+                </div>
+                <div class="max-w-md md:max-w-4xl mx-auto px-2">
+                   
+                    <div class="flex justify-between items-center my-5">
+                        <p class="bg-white rounded-lg py-1 px-3">
+                            what do you want to read ?
+                        </p>
+                        <button
+                            type="button"
+                            class="add_btn bg-blue-500 px-6 py-2 rounded-full text-white"
+                        >
+                            ADD
+                        </button>
+                    </div>
 
-                    <div class="flex gap-2 overflow-x-auto mt-2 md:flex-wrap">
-                        <button class="bg-green-500 px-4 py-1 rounded-lg">
+                    <div class="flex gap-2 overflow-x-auto mt-2">
+                        <button
+                            class="category-btn bg-blue-500 px-4 py-1 rounded-lg"
+                            data-category="ALL"
+                        >
                             ALL
                         </button>
-                        <button class="bg-white px-4 py-1 rounded-lg">
+                        <button
+                            class="category-btn bg-white px-4 py-1 rounded-lg"
+                            data-category="FOREST"
+                        >
                             FOREST
                         </button>
-                        <button class="bg-white px-4 py-1 rounded-lg">
+                        <button
+                            class="category-btn bg-white px-4 py-1 rounded-lg"
+                            data-category="RIVER"
+                        >
                             RIVER
                         </button>
-                        <button class="bg-white px-4 py-1 rounded-lg">
-                            BEACH
-                        </button>
-                        <button class="bg-white px-4 py-1 rounded-lg">
-                            BEACH
-                        </button>
-                    </div>
-
-                    <div class="mt-4 md:grid md:grid-cols-2 md:gap-6">
-                        <a href="article.html">
-                            <img
-                                src="jang.jpg"
-                                alt="view"
-                                class="w-full h-60 md:h-80 object-cover rounded-t-[25px]"
-                        /></a>
-
-                        <div
-                            class="bg-white rounded-b-[25px] md:rounded-[25px] flex justify-around items-center py-4"
+                        <button
+                            class="category-btn bg-white px-4 py-1 rounded-lg"
+                            data-category="BEACH"
                         >
-                            <img class="w-8 h-8" src="clock.png" alt="time" />
-                            <img
-                                class="w-8 h-8"
-                                src="heart (1).png"
-                                alt="heart"
-                            />
-                            <img
-                                class="w-8 h-8"
-                                src="black-placeholder-variant.png"
-                                alt="localisation"
-                            />
-                        </div>
+                            BEACH
+                        </button>
                     </div>
+
+                    <div
+                        id="cardsContainer"
+                        class="mt-6 flex flex-col gap-6 max-w-md mx-auto"
+                    ></div>
                 </div>
             </section>
-
             <div
-                class="fixed bottom-0 left-0 right-0 bg-white h-20 flex justify-around items-center"
+                class="fixed bottom-0 left-0 right-0 bg-white h-20 flex justify-around items-center md:flex md:flex-col md:top-0 md:absolute md:left-0"
             >
                 <img class="w-8 h-8" src="home.png" />
                 <img class="w-8 h-8" src="heart.png" />
                 <img class="w-8 h-8" src="black-placeholder-variant.png" />
-                <a href="profile.html"><img class="w-8 h-8" src="user.png" /></a>
+                <a href="profile.html"
+                    ><img class="w-8 h-8" src="user.png"
+                /></a>
             </div>
         </main>
+
+
+        <div
+            class="form fixed inset-0 flex justify-center items-center hidden bg-black/40"
+        >
+            <form
+                class="bg-white rounded-2xl shadow-lg p-6 space-y-4 w-[90%] max-w-md"
+            >
+                <h2 class="text-2xl font-bold text-center text-blue-600">
+                    Add Destination
+                </h2>
+
+                <input
+                    id="title"
+                    type="text"
+                    placeholder="Title"
+                    class="w-full border p-2 rounded"
+                    required
+                />
+                <input
+                    id="destination"
+                    type="text"
+                    placeholder="Destination"
+                    class="w-full border p-2 rounded"
+                    required
+                />
+                <input
+                    id="category"
+                    type="text"
+                    placeholder="Category"
+                    class="w-full border p-2 rounded"
+                />
+                <input
+                    id="note"
+                    type="number"
+                    min="1"
+                    max="5"
+                    placeholder="Note (1-5)"
+                    class="w-full border p-2 rounded"
+                />
+                <input
+                    id="image"
+                    type="text"
+                    placeholder="Image URL"
+                    class="w-full border p-2 rounded"
+                />
+
+                <div class="flex gap-4 pt-4">
+                    <button
+                        type="submit"
+                        class="flex-1 bg-blue-600 text-white py-2 rounded"
+                    >
+                        Add
+                    </button>
+                    <button
+                        type="button"
+                        class="close_btn flex-1 border py-2 rounded"
+                    >
+                        Close
+                    </button>
+                </div>
+            </form>
+              
+        </div>
+
+        <script src="main.js"></script>
     </body>
 </html>
